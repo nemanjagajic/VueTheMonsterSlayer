@@ -1,0 +1,52 @@
+#effect {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.highlight {
+    background-color: red;
+    width: 200px !important;
+}
+
+.shrink {
+    background-color: gray;
+    width: 50px !important;
+}
+
+.float {
+    float: right;
+}
+
+.green {
+    background-color: darkseagreen;
+}
+
+.blue {
+    background-color: dodgerblue;
+}
+
+.big {
+    width: 300px;
+    height: 300px;
+}
+
+.small {
+    height: 50px;
+}
+
+.frame {
+    border: 1px solid gray;
+}
+
+.visible {
+    width: 100px;
+    height: 50px;
+}
+
+.progress-bar {
+    max-width: 200px;
+    border-radius: 5px;
+    height: 20px;
+    background-color: lightseagreen;
+}

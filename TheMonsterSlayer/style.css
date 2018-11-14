@@ -1,0 +1,125 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #555;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    color: white;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.health-bar {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.health-bar__player {
+    width: 50%;
+}
+
+.health-bar__player-title {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.health-bar__player-percentage {
+    height: 30px;
+    width: 90%;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.current-percentage-player {
+    width: 100%;
+    background: mediumseagreen;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.current-percentage-monster {
+    width: 100%;
+    background: mediumseagreen;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.game-control {
+    height: 50px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 0 10px #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.btn-start {
+    background: mediumseagreen;
+}
+
+.btn-attack {
+    background-color: coral;
+}
+
+.btn-special-attack {
+    background-color: orange;
+}
+
+.btn-heal {
+    background-color: mediumseagreen;
+}
+
+.btn-give-up {
+    background-color: darkgrey;
+}
+
+.game-history {
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 0 10px #cccccc;
+    height: 350px;
+    padding: 10px 0;
+    overflow-y: scroll;
+}
+
+.history-log {
+    width: 400px;
+    height: 25px;
+    border: 1px solid #cccccc;
+    margin: 7px auto;
+    border-radius: 5px;
+}
+
+.player-log {
+    background: #80bfff;
+    color: white;
+    text-align: center;
+}
+
+.monster-log {
+    background-color: #ff884d;
+    color: white;
+    text-align: center;
+}

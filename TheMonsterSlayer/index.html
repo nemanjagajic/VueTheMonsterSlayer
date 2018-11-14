@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Monster Slayer</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="health-bar">
+            <div class="health-bar__player">
+                <div class="health-bar__player-title">You</div>
+                <div class="health-bar__player-percentage">
+                    <div class="current-percentage-player" :style="progressBarPlayer">{{ playerHealth }}</div>
+                </div>
+            </div>
+            <div class="health-bar__player">
+                <div class="health-bar__player-title">Monster</div>
+                <div class="health-bar__player-percentage">
+                    <div class="current-percentage-monster" :style="progressBarMonster">{{ monsterHealth }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-control">
+            <button class="btn-start" v-if="!isGameActive" @click="onStartGame">Start game</button>
+            <template v-else>
+                <button class="btn-attack" @click="onAttack">Attack</button>
+                <button class="btn-special-attack" @click="onAttack($event, true)">Special attack</button>
+                <button class="btn-heal" @click="onHeal">Heal</button>
+                <button class="btn-give-up" @click="isGameActive = false">Give up</button>
+            </template>
+        </div>
+
+        <div class="game-history">
+            <div class="history-log" v-for="(log, i) in gameHistory" :class="i % 2 == 0 ? 'player-log' : 'monster-log'">
+                {{ log }}
+            </div>
+        </div>
+    </div>
+
+    <script src="../../vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
