@@ -34,15 +34,19 @@ new Vue({
             const playerRandom = Math.floor((Math.random() * range) + 1);
 
             // Calculate Monster health
-            if (this.monsterHealth - playerRandom < 0) {
+            if (this.monsterHealth - playerRandom <= 0) {
                 this.monsterHealth = 0;
+                alert('Player won!');
+                this.isGameActive = false;
             } else {
                 this.monsterHealth -= playerRandom;
             }
 
             // Calculate Player health
-            if (this.playerHealth - monsterRandom < 0) {
+            if (this.playerHealth - monsterRandom <= 0) {
                 this.playerHealth = 0;
+                alert('Monster won!');
+                this.isGameActive = false;
             } else {
                 this.playerHealth -= monsterRandom;
             }
@@ -54,10 +58,10 @@ new Vue({
 
         onHeal: function() {
             const range = 10;
+            const heal = 7;
 
             // Calculate random damage
             const monsterRandom = Math.floor((Math.random() * range) + 1);
-            const playerRandom = Math.floor((Math.random() * range) + 1);
 
             // Calculate Player health after attack
             if (this.playerHealth - monsterRandom < 0) {
@@ -67,15 +71,15 @@ new Vue({
             }
 
             // Calculate Player health after heal
-            if (this.playerHealth + playerRandom > 100) {
+            if (this.playerHealth + heal > 100) {
                 this.playerHealth = 100;
             } else {
-                this.playerHealth += playerRandom;
+                this.playerHealth += heal;
             }
 
             // Log moves
             this.gameHistory.unshift('Monster hits Player for ' + monsterRandom);
-            this.gameHistory.unshift('Player heals for ' + playerRandom);
+            this.gameHistory.unshift('Player heals for ' + heal);
         }
     }
 });

@@ -53,6 +53,7 @@ button {
     align-items: center;
     justify-content: center;
     color: white;
+    transition: 0.5s;
 }
 
 .current-percentage-monster {
@@ -64,6 +65,7 @@ button {
     align-items: center;
     justify-content: center;
     color: white;
+    transition: 0.5s;
 }
 
 .game-control {
